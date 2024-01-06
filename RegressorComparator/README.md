@@ -1,16 +1,16 @@
 # Progetto-FIA
 Prima di eseguire il comparatore di regressori, bisogna verificare di aver risolto tutte le dipendenze, ovvero:
-• Pandas:
+- Pandas:
   Puoi risolvere con: pip install pandas
-• Joblib:
+- Joblib:
   Puoi risolvere con: pip install joblib
-• Scikit-learn:
+- Scikit-learn:
   Puoi risolvere con: pip install scikit-learn
-• Matplotlib:
+- Matplotlib:
   Puoi risolvere con: pip install matplotlib
-• Seaborn:
+- Seaborn:
   Puoi risolvere con: pip install seaborn
-• Statsmodels:
+- Statsmodels:
   Puoi risolvere con: pip install statsmodels
 Per verificare il corretto funzionamento del progetto, è necessario solo avviare main.py; le altre classi sono state utilizzare per strutturate il progetto e consentire una corretta comprensione e lettura del codice.
 
