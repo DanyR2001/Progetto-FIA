@@ -12,6 +12,7 @@ Prima di eseguire il comparatore di regressori, bisogna verificare di aver risol
   Puoi risolvere con: pip install seaborn
 - Statsmodels:
   Puoi risolvere con: pip install statsmodels
+
 Per verificare il corretto funzionamento del progetto, è necessario solo avviare main.py; le altre classi sono state utilizzare per strutturate il progetto e consentire una corretta comprensione e lettura del codice.
 
 
