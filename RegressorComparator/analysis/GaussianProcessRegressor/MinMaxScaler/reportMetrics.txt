@@ -1,0 +1,27 @@
+Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
+ Test di Shapiro-Wilk: Statistica=0.035555243492126465, p-value=0.0.
+      Ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
+ Test di Kolmogorov-Smirnov: Statistica=0.42826011035999656, p-value=0.0.
+      Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
+ Test di Anderson-Darling: 
+      Livello di significatività:15.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
+      Livello di significatività:10.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
+      Livello di significatività:5.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
+      Livello di significatività:2.5- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
+      Livello di significatività:1.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
+Indipendeza degli errori residui - test DURBIN-WATSON -
+ Test di Durbin-Watson: Statistica=1.9922634324150532
+      Non c'è evidenza di autocorrelazione significativa
+Metrics:
+    Variance_score:-82.17
+    Mean absolute error:0.08
+    Mean squared error:1.34
+    Root mean absolute error:1.16
+    R^2:-82.24
+Metrics - Kcross validation - :
+    Fit time mean:2.894688791036606
+    Score time mean:0.7398533582687378
+    MAE test mean: -0.08803552633259465
+    MSE test mean: -1.1488544987477731
+    RMSE test mean:-0.6520992263847557
+    R^2 test mean:-73.65578590102939
