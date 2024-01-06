@@ -24,3 +24,4 @@ Quando abbiamo un dataset possiamo trovarci davanti a 2 casi:
   In questo caso il il dataset andrà inserito nella cartella ./util/dataset e andrà avvito il file normalizer.py. Il programma in           automatico creerà nella cartella un dataset pulito in ./dataset con il relativo indice delle sostituzioni. Andranno fatte tutte le       modifiche ai nomi delle colonne sia nel main, che nel file AgentFarm.py.
 
 Infine possiamo eseguire il main.py
+Alla fine dell'esecuzione il programma avrà creato la cartella ./analysis nella quale possiamo trovare i vari grafici e score per ogni algoritmo, anche con diverse normalizzazioni applicate sui dati.
