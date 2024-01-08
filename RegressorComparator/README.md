@@ -19,9 +19,9 @@ Per verificare il corretto funzionamento del progetto, è necessario solo avviar
 Qual'ora si volesse utilizzare con un dataset diverso consiglio la lettura della documentazione; e per una maggiore comprensione del programma può essere esplicativo capire come far prendere il dataset al progetto.
 Quando abbiamo un dataset possiamo trovarci davanti a 2 casi:
 - Dataset numerico:
-  In questo caso, non dovremmo avere problemi, e possiamo inserire il dataset nella cartella ./dataset; ovviamente andranno modificate     tutti i nomi che si riferiscono alle colonne del dataset utilizzati attualmente, questo sia nel main, che nel file AgentFarm.py.
+  In questo caso, non dovremmo avere problemi, e possiamo inserire il dataset nella cartella ./dataset; ovviamente andranno modificate     tutti i nomi che si riferiscono alle colonne del dataset utilizzati attualmente, questo sia nel main.py, che nel file AgentFarm.py.
 - Dataset alfanumerico:
-  In questo caso il il dataset andrà inserito nella cartella ./util/dataset e andrà avvito il file normalizer.py. Il programma in           automatico creerà nella cartella un dataset pulito in ./dataset con il relativo indice delle sostituzioni. Andranno fatte tutte le       modifiche ai nomi delle colonne sia nel main, che nel file AgentFarm.py.
+  In questo caso il il dataset andrà inserito nella cartella ./util/dataset e andrà avvito il file normalizer.py. Il programma in           automatico creerà nella cartella un dataset pulito in ./dataset con il relativo indice delle sostituzioni. Andranno fatte tutte le       modifiche ai nomi delle colonne sia nel main.py, che nel file AgentFarm.py.
 
 Infine possiamo eseguire il main.py
 Alla fine dell'esecuzione il programma avrà creato la cartella ./analysis nella quale possiamo trovare i vari grafici e score per ogni algoritmo, anche con diverse normalizzazioni applicate sui dati.
