@@ -14,9 +14,9 @@ file_name="newDataset.csv"
 #prepariamo il data frame da pandas
 dataframe=pd.read_csv(path+"/"+file_name)
 #print(dataframe.info(memory_usage='deep'))
-print(dataframe.size)
+print(len(dataframe.index))
 dataframe = dataframe.sample(frac=0.02, random_state=42)
-print(dataframe.size)
+print(len(dataframe.index))
 
 agentComparison = ["LinearRegression","Ridge","SGDRegressor","LARS","LassoLars",
                    "BayesianRidge","ARDRegression","TweedieRegressor",

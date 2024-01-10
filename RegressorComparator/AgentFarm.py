@@ -101,9 +101,12 @@ class AgentFarm:
                 report.write(agente.name+": One or more samples have no neighbors within specified radius; predicting NaN.\n")
                 report.close()
             else:
-                ## se l'agente è un regressore lineare allore effetueremo delle analisi
+                ## effetueremo delle analisi
                 errori_residui = self.dip_test_set - prediction
                 # Calcolare l'errori residuo e mostrare un istogramma per vedere se hanno una distribuzione normale
+                plt.xlabel('Errori residui')
+                plt.ylabel('Densità degli errori')
+                plt.title('Grafico distribuzione degli errori')
                 sns.histplot(errori_residui, kde=True)
                 plt.savefig("./analysis/" + agente.name + "/" + self.normalizazione + "/distribuzioneErroreResiduo")
                 plt.close('all')
