@@ -1,7 +1,7 @@
 Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
- Test di Shapiro-Wilk: Statistica=0.9282187223434448, p-value=2.3739195945563372e-36.
+ Test di Shapiro-Wilk: Statistica=0.9134726524353027, p-value=4.785106351828598e-39.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
- Test di Kolmogorov-Smirnov: Statistica=0.5523627075351214, p-value=0.0.
+ Test di Kolmogorov-Smirnov: Statistica=0.5453326314609003, p-value=0.0.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
  Test di Anderson-Darling: 
       Livello di significatività:15.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
@@ -10,18 +10,18 @@ Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
       Livello di significatività:2.5- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
       Livello di significatività:1.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
 Indipendeza degli errori residui - test DURBIN-WATSON -
- Test di Durbin-Watson: Statistica=2.0255863465342814
+ Test di Durbin-Watson: Statistica=2.053583321251246
       Non c'è evidenza di autocorrelazione significativa
 Metrics:
     Variance_score:0.84
-    Mean absolute error:4481.16
-    Mean squared error:34970969.40
-    Root mean absolute error:5913.63
+    Mean absolute error:4514.58
+    Mean squared error:37044421.15
+    Root mean absolute error:6086.41
     R^2:0.84
 Metrics - Kcross validation - :
-    Fit time mean:0.012270742654800415
-    Score time mean:0.0011863410472869873
-    MAE test mean: -4478.074810772237
-    MSE test mean: -35747518.89062907
-    RMSE test mean:-5960.451037078831
-    R^2 test mean:0.846966535575785
+    Fit time mean:0.011446142196655273
+    Score time mean:0.0011289656162261964
+    MAE test mean: -4442.863861733887
+    MSE test mean: -33601443.927890345
+    RMSE test mean:-5783.031452899745
+    R^2 test mean:0.8514841339290959

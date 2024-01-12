@@ -1,5 +1,4 @@
-
-
+import os
 
 import pandas as pd
 from sklearn.utils import parallel_backend
@@ -38,5 +37,8 @@ for norm in typeNormalization:
     farm.correlazioneVariabili(norm+"_after")
     with parallel_backend('threading', n_jobs=n_job):
         farm.startComparison(agentComparison)
+
+os.system("python3 gui.py")
+
 
 

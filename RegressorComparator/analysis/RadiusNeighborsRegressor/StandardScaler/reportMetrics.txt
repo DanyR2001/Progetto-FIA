@@ -1,7 +1,7 @@
 Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
- Test di Shapiro-Wilk: Statistica=0.9392760992050171, p-value=5.053634344354811e-34.
+ Test di Shapiro-Wilk: Statistica=0.9332295060157776, p-value=2.468490497063172e-35.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
- Test di Kolmogorov-Smirnov: Statistica=0.459017392063411, p-value=0.0.
+ Test di Kolmogorov-Smirnov: Statistica=0.4591047182412001, p-value=0.0.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
  Test di Anderson-Darling: 
       Livello di significatività:15.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
@@ -10,7 +10,7 @@ Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
       Livello di significatività:2.5- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
       Livello di significatività:1.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
 Indipendeza degli errori residui - test DURBIN-WATSON -
- Test di Durbin-Watson: Statistica=1.9998011077103368
+ Test di Durbin-Watson: Statistica=1.993528135578101
       Non c'è evidenza di autocorrelazione significativa
 Metrics:
     Variance_score:0.07
@@ -19,9 +19,9 @@ Metrics:
     Root mean absolute error:0.05
     R^2:0.07
 Metrics - Kcross validation - :
-    Fit time mean:0.0037571728229522706
-    Score time mean:0.09595090746879578
-    MAE test mean: -0.04379611447871777
-    MSE test mean: -0.0030531632056963864
-    RMSE test mean:-0.0551902145457212
-    R^2 test mean:0.06977645496219863
+    Fit time mean:0.0048526287078857425
+    Score time mean:0.08527284860610962
+    MAE test mean: -0.043312290760601516
+    MSE test mean: -0.0029728672280208432
+    RMSE test mean:-0.054474682787841136
+    R^2 test mean:0.06385828224536347

@@ -1,7 +1,7 @@
 Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
- Test di Shapiro-Wilk: Statistica=0.03494232892990112, p-value=0.0.
+ Test di Shapiro-Wilk: Statistica=0.020357787609100342, p-value=0.0.
       Ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
- Test di Kolmogorov-Smirnov: Statistica=0.43424085293415116, p-value=0.0.
+ Test di Kolmogorov-Smirnov: Statistica=0.42308692975614814, p-value=0.0.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
  Test di Anderson-Darling: 
       Livello di significatività:15.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
@@ -10,18 +10,18 @@ Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
       Livello di significatività:2.5- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
       Livello di significatività:1.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
 Indipendeza degli errori residui - test DURBIN-WATSON -
- Test di Durbin-Watson: Statistica=2.0029469805065148
+ Test di Durbin-Watson: Statistica=1.9992786868306238
       Non c'è evidenza di autocorrelazione significativa
 Metrics:
-    Variance_score:-50.78
-    Mean absolute error:0.07
-    Mean squared error:0.81
-    Root mean absolute error:0.90
-    R^2:-50.82
+    Variance_score:-206.57
+    Mean absolute error:0.09
+    Mean squared error:3.27
+    Root mean absolute error:1.81
+    R^2:-206.75
 Metrics - Kcross validation - :
-    Fit time mean:3.7531541168689726
-    Score time mean:0.8777534186840057
-    MAE test mean: -0.09130449053125825
-    MSE test mean: -1.3337478996782006
-    RMSE test mean:-0.7640769771284568
-    R^2 test mean:-86.28282215309002
+    Fit time mean:3.0675399601459503
+    Score time mean:0.8045907258987427
+    MAE test mean: -0.09248123291651011
+    MSE test mean: -1.7626203411241226
+    RMSE test mean:-0.7448785003703644
+    R^2 test mean:-111.27742970476368
