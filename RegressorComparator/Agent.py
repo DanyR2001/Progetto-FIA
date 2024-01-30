@@ -87,7 +87,7 @@ class Agent:
             self.name = model_type
             self.type = "SVR"
         elif (model_type == "LinearSVR"):
-            self.model = svm.LinearSVR(dual=True,max_iter=5000)
+            self.model = svm.LinearSVR(dual=True,max_iter=8000)
             self.name = model_type
             self.type = "SVR"
         elif (model_type == "RandomForestRegressor"):

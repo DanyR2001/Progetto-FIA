@@ -12,7 +12,24 @@ dataframe=pd.read_csv("./dataset/san-francisco-payroll_2011-2019.csv")
 dataframe=dataframe.drop(columns=["Employee Name"])
 #Sostituiamo i valori Nan con NotProvided per evitare di avere problemi con il dizionario
 print("Number of istance Nan :" + str(dataframe.isna().sum().sum()))
-dataframe=dataframe.replace(np.nan,"Not Provided",regex=True)
+
+print("Number of istance Nan in tutto il dataset:" + str(dataframe.isna().sum().sum()))
+print("Number of istance Nan nella colonna 'Status' :" + str(dataframe["Status"].isna().sum()))
+dataframe=dataframe.replace(np.nan,"Not Present",regex=True)
+print("Number of istance Nan in tutto il dataset:" + str(dataframe.isna().sum().sum()))
+print("Number of istance Nan nella colonna 'Status' :" + str(dataframe["Status"].isna().sum()))
+
+print ("Number of row: "+str(len(dataframe.index)))
+print ("Number on 'Not Provided': "+str(dataframe[dataframe == 'Not Provided'].count()))
+
+print ("Number of row before cleaning: "+str(len(dataframe.index)))
+dataframe=dataframe.replace("Not Provided",np.nan,regex=True)
+print("Number of istance Nan in tutto il dataset before cleaning:" + str(dataframe.isna().sum().sum()))
+dataframe=dataframe.dropna()
+print("Number of istance Nan in tutto il dataset after cleaning:" + str(dataframe.isna().sum().sum()))
+print ("Number of row after cleaning: "+str(len(dataframe.index)))
+
+print(dataframe.info())
 
 data=[]
 data.append([header for header in dataframe.columns])
@@ -44,10 +61,8 @@ for i in range(1,len(data)):
                 data[i][j]=0
             else:
                 if "," in str(data[i][j]) or "." in str(data[i][j]):
-                    # print("5")
                     data[i][j] = float(data[i][j])
                 else:
-                    # print("6")
                     data[i][j] = int(data[i][j])
 
 print(listaDiSostiturioni)

@@ -24,8 +24,6 @@ class Regressore:
 
 class Scanner:
 
-
-
     def __init__(self,folder):
         self.toFind = ["LinearRegression", "Ridge", "SGDRegressor", "LARS", "LassoLars",
                   "BayesianRidge", "ARDRegression", "TweedieRegressor",
@@ -39,7 +37,7 @@ class Scanner:
             listaRegressori=os.listdir(self.folder)
             print(listaRegressori)
             for regressore in listaRegressori:
-                if regressore.startswith(".") or regressore.startswith("TabelleDiCorrelazione"):
+                if regressore.startswith(".") or regressore.startswith("TabelleDiCorrelazione")or regressore.startswith("DistribuzioneFeature"):
                     listaRegressori.remove(regressore)
             print(listaRegressori)
             if listaRegressori.sort()==self.toFind.sort():
@@ -106,7 +104,6 @@ def retuntString(disct:dict):
         stringa+=key+": "+str(disct[key])+"\n"
     return stringa
 def update(value):
-    print(app.listbox("list")[0])
     regressore=None
     for regressori in lista:
         if regressori.nome== app.listbox("list")[0]:
