@@ -1,7 +1,7 @@
 Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
- Test di Shapiro-Wilk: Statistica=0.9250211715698242, p-value=2.0440539686313104e-28.
+ Test di Shapiro-Wilk: Statistica=0.9353287220001221, p-value=1.2044425367783605e-26.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
- Test di Kolmogorov-Smirnov: Statistica=0.5586669074433444, p-value=0.0.
+ Test di Kolmogorov-Smirnov: Statistica=0.540918836022523, p-value=0.0.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
  Test di Anderson-Darling: 
       Livello di significatività:15.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
@@ -10,18 +10,18 @@ Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
       Livello di significatività:2.5- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
       Livello di significatività:1.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
 Indipendeza degli errori residui - test DURBIN-WATSON -
- Test di Durbin-Watson: Statistica=1.9937655904289933
+ Test di Durbin-Watson: Statistica=2.0337274591067893
       Non c'è evidenza di autocorrelazione significativa
 Metrics:
-    Variance_score:0.85
-    Mean absolute error:4336.96
-    Mean squared error:32628744.38
-    Root mean absolute error:5712.16
-    R^2:0.85
+    Variance_score:0.86
+    Mean absolute error:4294.08
+    Mean squared error:31224438.47
+    Root mean absolute error:5587.88
+    R^2:0.86
 Metrics - Kcross validation - :
-    Fit time mean:0.09505409598350525
-    Score time mean:0.003189706802368164
-    MAE test mean: -4371.734155359157
-    MSE test mean: -32376049.924342714
-    RMSE test mean:-5668.003726846611
-    R^2 test mean:0.8607058763681785
+    Fit time mean:0.12493062019348145
+    Score time mean:0.002294212579727173
+    MAE test mean: -4368.890542759243
+    MSE test mean: -33054715.234048195
+    RMSE test mean:-5736.541046987273
+    R^2 test mean:0.8560446628107695
