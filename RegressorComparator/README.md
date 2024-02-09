@@ -16,7 +16,9 @@ Per verificare il corretto funzionamento del progetto, è necessario solo avviar
 Qual'ora si volesse utilizzare con un dataset diverso consiglio la lettura della documentazione; e per una maggiore comprensione del programma può essere esplicativo capire come far prendere il dataset al progetto. Quando abbiamo un dataset possiamo trovarci davanti a 2 casi:
 - Dataset numerico: In questo caso, non dovremmo avere problemi, e possiamo inserire il dataset nella cartella ./dataset; ovviamente andranno modificate tutti i nomi che si riferiscono alle colonne del dataset utilizzati attualmente, questo sia nel main.py, che nel file AgentFarm.py.
 - Dataset alfanumerico: In questo caso il il dataset andrà inserito nella cartella ./util/dataset e andrà avvito il file normalizer.py. Il programma in automatico creerà nella cartella ./dataset un dataset pulito con il relativo indice delle sostituzioni. Andranno fatte tutte le modifiche ai nomi delle colonne sia nel main.py, che nel file AgentFarm.py.
-Inoltre l'AgentFarm permentte di essere utilizzata in 2 modalità distrinte:
+
+
+Inoltre l'AgentFarm permentte di essere utilizzata in 2 modalità distinte:
 -Automatica: Il modulo prevederà ad effettuare in automatico le fasi di:
   * Pulizia Outlier: Questo avverrà rimuovendo le tuple presenti nel primo e quarto quartile,
   in quanto non costituiscono informazioni rilevanti, ma bensì confondono il modello.
