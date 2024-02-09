@@ -6,10 +6,6 @@ Prima di eseguire il comparatore di regressori, bisogna verificare di aver risol
 - Matplotlib: Puoi risolvere con: pip install matplotlib
 - Seaborn: Puoi risolvere con: pip install seaborn
 - Statsmodels: Puoi risolvere con: pip install statsmodels
-- appJar: Puoi risolvere con: pip install appjar
-- PIL: Puoi risolvere con: pip install PIL
-- Scipy: Puoi risolvere con: pip install scipy
-- Mlxtend: Puoi risolvere con: pip install mlxtend
 
 Per verificare il corretto funzionamento del progetto, è necessario solo avviare main.py; le altre classi sono state utilizzare per strutturate il progetto e consentire una corretta comprensione e lettura del codice.
 Qual'ora si volesse utilizzare con un dataset diverso consiglio la lettura della documentazione; e per una maggiore comprensione del programma può essere esplicativo capire come far prendere il dataset al progetto. Quando abbiamo un dataset possiamo trovarci davanti a 2 casi:
