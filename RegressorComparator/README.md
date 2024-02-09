@@ -18,11 +18,11 @@ Qual'ora si volesse utilizzare con un dataset diverso consiglio la lettura della
 - Dataset alfanumerico: In questo caso il il dataset andrà inserito nella cartella ./util/dataset e andrà avvito il file normalizer.py. Il programma in automatico creerà nella cartella ./dataset un dataset pulito con il relativo indice delle sostituzioni. Andranno fatte tutte le modifiche ai nomi delle colonne sia nel main.py, che nel file AgentFarm.py.
 Inoltre l'AgentFarm permentte di essere utilizzata in 2 modalità distrinte:
 -Automatica: Il modulo preveder`a ad effettuare in automatico le fasi di:
-* Pulizia Outlier: Questo avverr`a rimuovendo le tuple presenti nel primo e quarto quartile,
-in quanto non costituiscono informazioni rilevanti, ma bens`ı confondono il modello.
-* Feature Scaling: Per ogni feature andiamo a effettuare l’analisi dei curti oltre a valutare la sua distribuzione, per capire se applicare o meno una normalizzazione.
-* Feature selection: Attraverlo l’utilizzo del metodo ExhaustiveFeatureSelector andiamo a prendere le feature che per un determinato modello aumentano la metrica r2.
-* Data cleaning: Sulle feature restituite da ExhaustiveFeatureSelector andiamo a prendere solo le tuple con valori non uguali a zero.
+  * Pulizia Outlier: Questo avverr`a rimuovendo le tuple presenti nel primo e quarto quartile,
+  in quanto non costituiscono informazioni rilevanti, ma bens`ı confondono il modello.
+  * Feature Scaling: Per ogni feature andiamo a effettuare l’analisi dei curti oltre a valutare la sua distribuzione, per capire se applicare o meno una normalizzazione.
+  * Feature selection: Attraverlo l’utilizzo del metodo ExhaustiveFeatureSelector andiamo a prendere le feature che per un determinato modello aumentano la metrica r2.
+  * Data cleaning: Sulle feature restituite da ExhaustiveFeatureSelector andiamo a prendere solo le tuple con valori non uguali a zero.
 - Manuale: Qui verranno fatte tutte le fasi di datacleaning, featurescaling, featureSelection seguendo le indicazioni del utente.
 
 Adesso possiamo eseguire il main.py. Alla fine dell'esecuzione il programma avrà creato la cartella ./analysis nella quale possiamo trovare i vari grafici e score per ogni algoritmo, anche con diverse normalizzazioni applicate sui dati.
