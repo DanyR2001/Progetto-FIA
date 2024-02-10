@@ -31,7 +31,7 @@ class Scanner:
                   "RadiusNeighborsRegressor", "GaussianProcessRegressor", "SVR", "NuSVR", "LinearSVR"]
         self.folder = folder
 
-    def scann(self):
+    def scan(self):
         lista=[]
         if os.path.exists(self.folder):
             listaRegressori=os.listdir(self.folder)
@@ -96,7 +96,7 @@ class Scanner:
         return lista
 
 x=Scanner("./analysis")
-lista=x.scann()
+lista=x.scan()
 
 def retuntString(disct:dict):
     stringa=""

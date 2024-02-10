@@ -22,8 +22,9 @@ class Agent:
     type = None
     n_job = None
 
-    def __init__(self, model_type="Complement", n_job:int = 1) -> None:
+    def __init__(self, model_type="Complement", n_job:int = 1,randState:int=random.randint(0, 256)) -> None:
         self.n_job=n_job
+        self.randState=randState
         print("------------------------------ Start " + model_type + " ------------------------------")
         print("")
         if (model_type == "LinearRegression"):
@@ -111,7 +112,7 @@ class Agent:
         return variance_score, mean_absolute, mean_squared, root_mean_absolute, r2
 
     def cross_validation(self, X_train, y_train):
-        rfk = RepeatedKFold(n_splits=10, n_repeats=4, random_state=random.randint(0, 256))
+        rfk = RepeatedKFold(n_splits=10, n_repeats=4, random_state=self.randState)
         tests = list(["neg_mean_absolute_error", "neg_mean_squared_error","neg_root_mean_squared_error", "r2"])
         cv_score = cross_validate(self.model, X_train, y_train, cv=rfk, n_jobs=self.n_job, verbose=5, scoring=tests)
         fit_time_mean = statistics.mean(cv_score['fit_time'])

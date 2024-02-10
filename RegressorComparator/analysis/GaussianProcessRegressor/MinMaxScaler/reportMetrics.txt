@@ -1,7 +1,7 @@
 Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
- Test di Shapiro-Wilk: Statistica=0.19142121076583862, p-value=0.0.
+ Test di Shapiro-Wilk: Statistica=0.24211889505386353, p-value=0.0.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
- Test di Kolmogorov-Smirnov: Statistica=0.5061293443374174, p-value=0.0.
+ Test di Kolmogorov-Smirnov: Statistica=0.32111753821657024, p-value=1.1580832370112583e-78.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
  Test di Anderson-Darling: 
       Livello di significatività:15.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
@@ -10,18 +10,18 @@ Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
       Livello di significatività:2.5- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
       Livello di significatività:1.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
 Indipendeza degli errori residui - test DURBIN-WATSON -
- Test di Durbin-Watson: Statistica=1.993594729457083
+ Test di Durbin-Watson: Statistica=1.8769114837813203
       Non c'è evidenza di autocorrelazione significativa
 Metrics:
-    Variance_score:-19.62
-    Mean absolute error:12862.66
-    Mean squared error:4647789520.21
-    Root mean absolute error:68174.70
-    R^2:-19.62
+    Variance_score:-65.18
+    Mean absolute error:0.36
+    Mean squared error:2.73
+    Root mean absolute error:1.65
+    R^2:-65.21
 Metrics - Kcross validation - :
-    Fit time mean:3.5497850596904756
-    Score time mean:0.9685578346252441
-    MAE test mean: -15030.010108702147
-    MSE test mean: -6460815166.978177
-    RMSE test mean:-70095.09511486207
-    R^2 test mean:-27.198075936049417
+    Fit time mean:1.3695597767829895
+    Score time mean:0.499257755279541
+    MAE test mean: -0.4579526226823366
+    MSE test mean: -5.452314946182699
+    RMSE test mean:-1.9498480410875378
+    R^2 test mean:-134.3106857680993

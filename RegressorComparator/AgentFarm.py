@@ -13,7 +13,7 @@ from mlxtend.feature_selection import ExhaustiveFeatureSelector
 
 from Agent import Agent
 import seaborn as sns
-from scipy.stats import shapiro, kstest, anderson
+from scipy.stats import shapiro, kstest, anderson, skew, kurtosis
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 
@@ -29,12 +29,13 @@ class AgentFarm:
     __typeNormalization = ["StandardScaler", "MinMaxScaler", "None"]
 
 
-    def __init__(self, dataframe:pd.DataFrame,n_job:int,target:str,mode:str="Manual",outlier:bool=False,rangeOutlier:float=2.00):
+    def __init__(self, dataframe:pd.DataFrame,target:str,n_job:int=-1,mode:str="Manual",outlier:bool=False,rangeOutlier:float=2.00):
         self.mode=mode
-        self.dataframeBackUp=dataframe
+        self.dataframeBackUp=pd.DataFrame(dataframe)
         self.dataframe=dataframe
         self.n_job=n_job
         self.target=target
+        self.randState=random.randint(0, 256)
 
         if outlier:
             self.distriubuzioneFeateure("Before")
@@ -103,29 +104,45 @@ class AgentFarm:
         plt.savefig("./analysis/TabelleDiCorrelazione/" + arr[0] + "/correlazione_" + arr[1])
         plt.close('all')
 
-    def featureScaling(self,normalizazione:str,includeTarget:bool=False):
+    def featureScaling(self,normalizazione:str,includeTarget:bool=False,mode:str="Manual"):
         self.normalizazione=normalizazione
+        print(mode +" hahah "+self.mode)
+        if mode=="Manual":
+            if not includeTarget:
+                var_dip=self.dataframe["Benefits"]
+                var_ind=self.dataframe.drop("Benefits",axis=1)
 
-        if not includeTarget:
-            var_dip=self.dataframe["Benefits"]
-            var_ind=self.dataframe.drop("Benefits",axis=1)
+                if self.normalizazione == "MinMaxScaler":
+                    type = MinMaxScaler().fit_transform(var_ind.values)
+                    var_ind=pd.DataFrame(type,columns=var_ind.columns,index=var_ind.index,dtype="float32")
+                elif self.normalizazione == "StandardScaler":
+                    type = Normalizer().fit_transform(var_ind.values)
+                    var_ind = pd.DataFrame(type, columns=var_ind.columns, index=var_ind.index)
 
-            if self.normalizazione == "MinMaxScaler":
-                type = MinMaxScaler().fit_transform(var_ind.values)
-                var_ind=pd.DataFrame(type,columns=var_ind.columns,index=var_ind.index,dtype="float32")
-            elif self.normalizazione == "StandardScaler":
-                type = Normalizer().fit_transform(var_ind.values)
-                var_ind = pd.DataFrame(type, columns=var_ind.columns, index=var_ind.index)
+                var_ind['Benefits']=var_dip
+                self.dataframe=var_ind
+            else:
+                if self.normalizazione == "MinMaxScaler":
+                    type = MinMaxScaler().fit_transform(self.dataframe.values)
+                    self.dataframe=pd.DataFrame(type,columns=self.dataframe.columns,index=self.dataframe.index,dtype="float32")
+                elif self.normalizazione == "StandardScaler":
+                    type = Normalizer().fit_transform(self.dataframe.values)
+                    self.dataframe = pd.DataFrame(type, columns=self.dataframe.columns, index=self.dataframe.index)
 
-            var_ind['Benefits']=var_dip
-            self.dataframe=var_ind
-        else:
-            if self.normalizazione == "MinMaxScaler":
-                type = MinMaxScaler().fit_transform(self.dataframe.values)
-                self.dataframe=pd.DataFrame(type,columns=self.dataframe.columns,index=self.dataframe.index,dtype="float32")
-            elif self.normalizazione == "StandardScaler":
-                type = Normalizer().fit_transform(self.dataframe.values)
-                self.dataframe = pd.DataFrame(type, columns=self.dataframe.columns, index=self.dataframe.index)
+        elif mode == "Auto":
+            for var in self.dataframe.columns:
+                #print("Analisis feature "+var)
+                asimmetria_feature = skew(self.dataframe[var])
+                curtosi_feature = kurtosis(self.dataframe[var])
+                #print("Asimmetria "+str(asimmetria_feature)+" curtosi "+str(curtosi_feature))
+
+                if (-0.5<=asimmetria_feature or asimmetria_feature>=0.5) or (-0.5<=curtosi_feature or curtosi_feature>=0.5):
+                    if self.normalizazione == "MinMaxScaler":
+                        self.dataframe[var] = MinMaxScaler().fit_transform(self.dataframe[[var]])
+                    elif self.normalizazione == "StandardScaler":
+                        self.dataframe[var] = Normalizer().fit_transform(self.dataframe[[var]])
+                    print("La feature '"+var+"' è stata normalizzata.")
+
 
     def featureSelection(self,listaRimossi:list):
         # togliamo le colonne che non ci hanno una bassa varianza
@@ -149,7 +166,7 @@ class AgentFarm:
             self.singleComparison(NameAgent)
 
     def singleComparison(self,NameAgent:str):
-        agente = Agent(NameAgent, self.n_job)
+        agente = Agent(NameAgent, self.n_job,self.randState)
         agente.fit(self.indi_training_set, self.dip_training_set)
         prediction = agente.predict(self.indi_testing_set)
 
@@ -284,8 +301,9 @@ class AgentFarm:
 
     def autoCompariosn(self,typeNorm:str,percentageTest:float):
         for NameAgent in self.__agentComparison:
-            self.dataframe = self.dataframeBackUp
-            self.featureScaling(typeNorm,True)
+            self.dataframe = pd.DataFrame(self.dataframeBackUp)
+            #print(self.dataframe)
+            self.featureScaling(typeNorm,mode=self.mode)
             self.featureSelection(self.listaRimossi)
             self.correlazioneVariabili(typeNorm + "_before")
             listaRimossi,listaSelezionati = self.autoDataPreparation(NameAgent)
@@ -298,20 +316,20 @@ class AgentFarm:
             with parallel_backend('threading', n_jobs=self.n_job):
                 self.singleComparison(NameAgent)
 
-    def start(self,listaRimossi:list,listaCleaning:list,percentageTest:float):
+    def start(self,listaRimossi:list,listaCleaning:list,percentageTest:float=0.33):
         self.listaRimossi = listaRimossi
         self.listaCleaning = listaCleaning
         for norm in self.__typeNormalization:
             print("Normalizin: " + norm)
             if self.mode == "Manual":
-                self.dataframe = self.dataframeBackUp
+                self.dataframe = pd.DataFrame(self.dataframeBackUp)
+                #print(self.dataframe)
                 self.dataCleaning(listaCleaning,0)
                 self.correlazioneVariabili(norm + "_before")
-                self.featureScaling(norm,False)
+                self.featureScaling(norm,True)
                 self.featureSelection(self.listaRimossi)
                 self.correlazioneVariabili(norm + "_after")
                 self.initComparison(percentageTest)
-                print(self.dataframe)
                 with parallel_backend('threading', n_jobs=self.n_job):
                     self.startComparison()
             elif self.mode == "Auto":

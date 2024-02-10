@@ -15,7 +15,7 @@ file_name="newDataset.csv"
 dataframe=pd.read_csv(path+"/"+file_name)
 #print(dataframe.info(memory_usage='deep'))
 print("Numero di istanze prima dell'partizionamento :"+str(len(dataframe.index)))
-dataframe = dataframe.sample(frac=0.02, random_state=42)
+dataframe = dataframe.sample(frac=0.010, random_state=42)
 print("Numero di istanze dopo dell'partizionamento :"+str(len(dataframe.index)))
 
 
@@ -24,7 +24,7 @@ listaRimossi=list({"TotalPay","TotalPay&Benefits"})
 listaCleaning=["BasePay","Benefits"]
 n_job=8
 
-farm = AgentFarm(dataframe,n_job,"Benefits",mode="Manual",outlier=True)
+farm = AgentFarm(dataframe,"Benefits",n_job=n_job,mode="Manual",outlier=True)
 farm.start(listaRimossi,listaCleaning,0.33)
 
 
