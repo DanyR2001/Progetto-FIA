@@ -1,7 +1,7 @@
 Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
- Test di Shapiro-Wilk: Statistica=0.9596545100212097, p-value=1.44079220125784e-14.
+ Test di Shapiro-Wilk: Statistica=0.861547589302063, p-value=1.0030483506425784e-26.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
- Test di Kolmogorov-Smirnov: Statistica=0.4635864555251574, p-value=3.438405434822795e-168.
+ Test di Kolmogorov-Smirnov: Statistica=0.45813458692088704, p-value=4.803560078044674e-164.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
  Test di Anderson-Darling: 
       Livello di significatività:15.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
@@ -10,18 +10,18 @@ Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
       Livello di significatività:2.5- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
       Livello di significatività:1.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
 Indipendeza degli errori residui - test DURBIN-WATSON -
- Test di Durbin-Watson: Statistica=2.00099543203041
+ Test di Durbin-Watson: Statistica=2.0548933091411032
       Non c'è evidenza di autocorrelazione significativa
 Metrics:
-    Variance_score:0.79
+    Variance_score:0.73
     Mean absolute error:0.02
     Mean squared error:0.00
     Root mean absolute error:0.03
-    R^2:0.79
+    R^2:0.73
 Metrics - Kcross validation - :
-    Fit time mean:0.20552221536636353
-    Score time mean:0.002522379159927368
-    MAE test mean: -0.021699084575272122
-    MSE test mean: -0.0010101531191020147
-    RMSE test mean:-0.03157303530120958
-    R^2 test mean:0.724383807258013
+    Fit time mean:0.332148277759552
+    Score time mean:0.0029776573181152345
+    MAE test mean: -0.02092573862434566
+    MSE test mean: -0.0008814800410328441
+    RMSE test mean:-0.02952759542610957
+    R^2 test mean:0.7539633495316991

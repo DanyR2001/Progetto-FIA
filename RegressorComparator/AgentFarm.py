@@ -38,7 +38,7 @@ class AgentFarm:
         self.randState=random.randint(0, 256)
 
         if outlier:
-            self.distriubuzioneFeateure("Before")
+            self.distribuzioneFeateure("Before")
             # Calcolare l'IQR per la colonna
             Q1 = self.dataframeBackUp.quantile(0.25)
             Q3 = self.dataframeBackUp.quantile(0.75)
@@ -54,7 +54,7 @@ class AgentFarm:
 
             pd.options.mode.copy_on_write = True
             self.dataframe=pd.DataFrame(self.dataframeBackUp)
-            self.distriubuzioneFeateure("After")
+            self.distribuzioneFeateure("After")
 
     def dataCleaning(self,listaRimossi:list,valueTarget=None):
         #eliminiamo le tuple con il peso non presente
@@ -66,7 +66,7 @@ class AgentFarm:
 
         self.dataframe = self.dataframe.reset_index()
 
-    def distriubuzioneFeateure(self,lable:str):
+    def distribuzioneFeateure(self, lable:str):
 
         plt.figure(figsize=(10, 6))
         sns.boxplot(data=self.dataframe)

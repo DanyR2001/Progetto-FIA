@@ -1,7 +1,7 @@
 Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
- Test di Shapiro-Wilk: Statistica=0.9176717400550842, p-value=4.057047870346973e-21.
+ Test di Shapiro-Wilk: Statistica=0.8319021463394165, p-value=5.347433564851088e-29.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
- Test di Kolmogorov-Smirnov: Statistica=0.4648902428435554, p-value=3.435155067415921e-169.
+ Test di Kolmogorov-Smirnov: Statistica=0.46184832517444807, p-value=7.320939873038082e-167.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
  Test di Anderson-Darling: 
       Livello di significatività:15.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
@@ -10,18 +10,18 @@ Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
       Livello di significatività:2.5- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
       Livello di significatività:1.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
 Indipendeza degli errori residui - test DURBIN-WATSON -
- Test di Durbin-Watson: Statistica=1.944672337746592
+ Test di Durbin-Watson: Statistica=2.0330008554874506
       Non c'è evidenza di autocorrelazione significativa
 Metrics:
-    Variance_score:0.78
+    Variance_score:0.70
     Mean absolute error:0.02
     Mean squared error:0.00
     Root mean absolute error:0.03
-    R^2:0.77
+    R^2:0.70
 Metrics - Kcross validation - :
-    Fit time mean:0.042012929916381836
-    Score time mean:0.001617485284805298
-    MAE test mean: -0.021114911594870545
-    MSE test mean: -0.001110776339475514
-    RMSE test mean:-0.03312347003494363
-    R^2 test mean:0.6964661420675025
+    Fit time mean:0.04737152457237244
+    Score time mean:0.0016145944595336915
+    MAE test mean: -0.020508605437665344
+    MSE test mean: -0.0009587201912608874
+    RMSE test mean:-0.03075475968320835
+    R^2 test mean:0.7326476824371955

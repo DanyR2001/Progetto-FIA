@@ -1,7 +1,7 @@
 Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
- Test di Shapiro-Wilk: Statistica=0.9447410106658936, p-value=2.7064623378157244e-17.
+ Test di Shapiro-Wilk: Statistica=0.933834433555603, p-value=5.698002113310678e-19.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
- Test di Kolmogorov-Smirnov: Statistica=0.4345311801646087, p-value=8.526174868942332e-147.
+ Test di Kolmogorov-Smirnov: Statistica=0.4410307739781707, p-value=1.961217872996815e-151.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
  Test di Anderson-Darling: 
       Livello di significatività:15.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
@@ -10,18 +10,18 @@ Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
       Livello di significatività:2.5- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
       Livello di significatività:1.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
 Indipendeza degli errori residui - test DURBIN-WATSON -
- Test di Durbin-Watson: Statistica=2.10876202583313
+ Test di Durbin-Watson: Statistica=1.958504319190979
       Non c'è evidenza di autocorrelazione significativa
 Metrics:
-    Variance_score:0.86
+    Variance_score:0.85
     Mean absolute error:0.06
     Mean squared error:0.01
     Root mean absolute error:0.08
-    R^2:0.86
+    R^2:0.85
 Metrics - Kcross validation - :
-    Fit time mean:0.0536352276802063
-    Score time mean:0.0022430121898651123
-    MAE test mean: -0.054850011505186556
-    MSE test mean: -0.005038670368958264
-    RMSE test mean:-0.07067982843145729
-    R^2 test mean:0.8724761847047433
+    Fit time mean:0.06990604996681213
+    Score time mean:0.0028802454471588135
+    MAE test mean: -0.05491558387875557
+    MSE test mean: -0.005015723512042314
+    RMSE test mean:-0.07059754719957709
+    R^2 test mean:0.8729358857418201

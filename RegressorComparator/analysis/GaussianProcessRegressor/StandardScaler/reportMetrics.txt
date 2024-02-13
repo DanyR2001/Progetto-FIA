@@ -1,7 +1,7 @@
 Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
- Test di Shapiro-Wilk: Statistica=0.45986640453338623, p-value=9.80908925027372e-45.
+ Test di Shapiro-Wilk: Statistica=0.17813950777053833, p-value=0.0.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
- Test di Kolmogorov-Smirnov: Statistica=0.49337678173095234, p-value=6.056319595746723e-192.
+ Test di Kolmogorov-Smirnov: Statistica=0.4923013683880401, p-value=4.708255851417982e-191.
       Non ci sono prove a sufficenza per rifiutare l'ipotesi che seguano una distribuzione normale.
  Test di Anderson-Darling: 
       Livello di significatività:15.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
@@ -10,18 +10,18 @@ Normalità del errore residuo: - TEST Shapiro-Wilk e Kolmogorov-Smirnov -
       Livello di significatività:2.5- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
       Livello di significatività:1.0- Non ci sono evidenze sufficienti per dire che la distribuzione sia non normale.
 Indipendeza degli errori residui - test DURBIN-WATSON -
- Test di Durbin-Watson: Statistica=1.9491841144312032
+ Test di Durbin-Watson: Statistica=1.9528812463327159
       Non c'è evidenza di autocorrelazione significativa
 Metrics:
-    Variance_score:1.00
+    Variance_score:0.98
     Mean absolute error:0.00
     Mean squared error:0.00
-    Root mean absolute error:0.00
-    R^2:1.00
+    Root mean absolute error:0.01
+    R^2:0.98
 Metrics - Kcross validation - :
-    Fit time mean:1.286270010471344
-    Score time mean:0.5510812222957611
-    MAE test mean: -0.0011807310920768663
-    MSE test mean: -5.29179509884932e-06
-    RMSE test mean:-0.002252526242844354
-    R^2 test mean:0.9985481751126264
+    Fit time mean:1.6265659511089325
+    Score time mean:0.5920306026935578
+    MAE test mean: -0.0012861757551740848
+    MSE test mean: -8.579024978026016e-06
+    RMSE test mean:-0.0027361588874340722
+    R^2 test mean:0.997552841135656
