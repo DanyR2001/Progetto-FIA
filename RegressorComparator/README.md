@@ -4,6 +4,7 @@ Prima di eseguire il comparatore di regressori, bisogna verificare di aver risol
 - Joblib: Puoi risolvere con: pip install joblib
 - Scikit-learn: Puoi risolvere con: pip install scikit-learn
 - Matplotlib: Puoi risolvere con: pip install matplotlib
+- Numpy: Puoi risolvere con: pip install numpy
 - Seaborn: Puoi risolvere con: pip install seaborn
 - Statsmodels: Puoi risolvere con: pip install statsmodels
 - appJar: Puoi risolvere con: pip install appjar
